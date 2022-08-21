@@ -2,8 +2,21 @@ package main
 
 import (
 	"fmt"
+	"net/http"
+	"sirka/controller"
+	"sirka/model"
 )
 
 func main() {
-	fmt.Println("hi")
+	mux := controller.RegisterApi()
+	db := model.ConnectDB()
+	defer db.Close()
+
+	fmt.Println("Serving...");
+	// for heroku
+	// port := os.Getenv("PORT")
+	// log.Fatal(http.ListenAndServe(":"+port, mux))
+
+	// for Local
+	http.ListenAndServe(":80", mux)
 }
