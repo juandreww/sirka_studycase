@@ -4,13 +4,14 @@ import (
 	"fmt"
 	"net/http"
 	"github.com/juandreww/sirka_studycase/controller"
+	"github.com/juandreww/sirka_studycase/model"
 	// "sirka/model"
 )
 
 func main() {
 	mux := controller.RegisterApi()
-	// db := model.ConnectDB()
-	// defer db.Close()
+	db := model.ConnectDB()
+	defer db.Close()
 
 	fmt.Println("Serving...");
 	// for heroku
