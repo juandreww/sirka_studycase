@@ -9,6 +9,6 @@ import (
 
 func RegisterApi() *http.ServeMux {
 	mux := http.NewServeMux()
-	// mux.HandleFunc("/create", create())
+	mux.HandleFunc("/create", create())
 	return mux
 }
