@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"sirka/controller"
+	"github.com/juandreww/sirka_studycase/controller"
 	// "sirka/model"
 )
 
