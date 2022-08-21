@@ -13,7 +13,6 @@ const (
 	user = "'awtpbzyctlpydm'"
 	password = "a7bf40c39496f73a03e7412befbc787d29138445d7fce2a34bf31df40cf07d96"
 	dbname = "d4ehughfapgq0k"
-
 )
 
 var con *sql.DB
